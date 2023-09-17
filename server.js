@@ -10,7 +10,7 @@ const express = require("express");
 const mongoose = require("mongoose")
 
 //import route productRoute
-const productRoute = require ('./routes/productRoute')
+const productRoute = require ('./Routes/productRoute')
 
 const errorMiddleware = require('./middleware/errorMiddleware')
 
