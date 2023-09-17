@@ -14,9 +14,6 @@ const productRoute = require ('./Routes/productRoute')
 
 const errorMiddleware = require('./middleware/errorMiddleware')
 
-//import route from userRoutew
-const userRoute = require ('./routes/userRoute')
-
 //npm npm install cors
 const cors = require('cors')
 
