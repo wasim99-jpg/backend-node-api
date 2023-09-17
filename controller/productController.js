@@ -4,6 +4,7 @@ const asyncHandler = require('express-async-handler')
 //**CONTROLLER START, controller is a method where CRUD operation are contains
 //
 //get(read) all product 
+//npm i async-handler to use asyncHandler()
 const getProducts = asyncHandler(async(req,res)=> {
     try{
        const products = await Product.find({});

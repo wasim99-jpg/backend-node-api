@@ -25,6 +25,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000
 const MONGO_URL = process.env.MONGO_URL
+const FRONTEND = process.env.FRONTEND
 
 
 //------------------------------------------------
@@ -32,14 +33,14 @@ const MONGO_URL = process.env.MONGO_URL
 //
 
 //enable few website(frontend) to access the backend
-//var corsOptions = {
-//    origin: 'http://example.com',
- //   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-// }
+var corsOptions = {
+    origin: FRONTEND,
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+ }
 
 //enable all CORS request
 //kiranya boleh enable for frontend to fetch backend data
-app.use(cors())
+app.use(cors(corsOptions))
 
 //accept input using json
 app.use(express.json())
