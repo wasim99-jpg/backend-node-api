@@ -1,8 +1,10 @@
 
 //npm install dotenv --save
 require('dotenv').config()
+
 //npm i nodemon
 //npm run dev
+
 //npm i express
 const express = require("express");
 
@@ -70,6 +72,7 @@ app.get('/blog',(req,res)=> {
     res.send('hello my name wasim')
 })
 
+//handle error
 app.use(errorMiddleware);
 
 //------------------------------------------------
