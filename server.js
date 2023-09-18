@@ -33,14 +33,14 @@ const FRONTEND = process.env.FRONTEND
 //
 
 //enable few website(frontend) to access the backend
-var corsOptions = {
-    origin: FRONTEND,
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
- }
+//var corsOptions = {
+//    origin: FRONTEND,
+//    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+// }
 
 //enable all CORS request
 //kiranya boleh enable for frontend to fetch backend data
-app.use(cors(corsOptions))
+app.use(cors())
 
 //accept input using json
 app.use(express.json())
